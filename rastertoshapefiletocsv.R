@@ -19,13 +19,13 @@ library(raster)
 
 # Here how many shapefiles you want to get raster values in it totally up to you
 
-buffer <- shapefile("C:/RSofENV/l8/buff.shp")
-sampler <- shapefile("C:/RSofENV/l8/sampler.shp")
+buffer <- shapefile("####") # Full path of the shapefile
+sampler <- shapefile("####")
 
 # The following lines get the names and locations of the .tif raster files to later automatically import them
 
-rlist=list.files("C:/RSofENV/s2lvl2a", pattern="tif$",all.files=TRUE, full.names=TRUE) # Between "" put your folder of raster files
-nlist=list.files("C:/RSofENV/s2lvl2a", pattern="tif$",all.files=TRUE, full.names=FALSE) # Between "" put your folder of raster files
+rlist=list.files("####", pattern="tif$",all.files=TRUE, full.names=TRUE) # Between "" put your folder of raster files
+nlist=list.files("####", pattern="tif$",all.files=TRUE, full.names=FALSE) # Between "" put your folder of raster files
 
 # Automatic import of raster file to Global Environment
 
@@ -81,4 +81,4 @@ alldata <- rbind(means, pointcentre)
 
 ### Part 4 -- Writing these to a csv file
 library(utils)
-write.csv(alldata, file="C:/RSofENV/s2lvl2a/s2.csv")
+write.csv(alldata, file="####") # Put your location for saving the .csv with its file name in place of ####
